@@ -1,4 +1,8 @@
-package com.laatencionalpresente.www.laatencionalpresente;
+package com.laatencionalpresente.www.laatencionalpresente.Activitys;
+
+/**
+ *Esta clase es el Activity Drawer, sera nuestra clase principal, aqui se veran todos los cursos.
+ */
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.laatencionalpresente.www.laatencionalpresente.R;
 
 public class ActivityPrincipal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

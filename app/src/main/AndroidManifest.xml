@@ -17,9 +17,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityPrincipal"
+            android:name=".Activitys.ActivityPrincipal"
             android:label="@string/title_activity_principal"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Activitys.ActivityLogin">
+        </activity>
+        <activity android:name=".Activitys.ActivityRegistrar">
+        </activity>
+        <activity android:name=".Activitys.ActivityPerfil">
+        </activity>
+        <activity android:name=".Activitys.ActivityAreaPersonal">
         </activity>
     </application>
 
