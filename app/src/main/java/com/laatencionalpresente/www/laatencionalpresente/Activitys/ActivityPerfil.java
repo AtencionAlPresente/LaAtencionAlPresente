@@ -1,6 +1,6 @@
 package com.laatencionalpresente.www.laatencionalpresente.Activitys;
 
-/**
+/*
  *esta activity es para ver y modificar los datos del perfil del usuario
  */
 

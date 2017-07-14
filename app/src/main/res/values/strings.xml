@@ -1,9 +1,20 @@
 <resources>
-    <string name="app_name">LaAtencionAlPresente</string>
+    <string name="app_name">La Atencion Al Presente</string>
     <string name="title_activity_principal">ActivityPrincipal</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+
+    <string name="idioma_esp">Español</string>
+    <string name="idioma_ing">Ingles</string>
+
+    <string name="nav_area_cliente">Area Cliente</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="nav_login">Login</string>
+    <string name="nav_contacto">Contacto</string>
+
+
+
+
 </resources>

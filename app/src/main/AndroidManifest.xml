@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".Activitys.ActivityAreaPersonal">
         </activity>
+        <activity android:name=".Activitys.ActivityContacto">
+        </activity>
     </application>
 
 </manifest>

@@ -1,6 +1,6 @@
 package com.laatencionalpresente.www.laatencionalpresente.Activitys;
 
-/**
+/*
  *esta activity es donde estara el area personal del usuario
  */
 

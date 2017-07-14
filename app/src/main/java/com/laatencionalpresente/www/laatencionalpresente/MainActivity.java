@@ -1,6 +1,6 @@
 package com.laatencionalpresente.www.laatencionalpresente;
 
-/**
+/*
  * Esta clase la utilizaremos para gargar datos previos al inicio de la app.
  */
 

@@ -1,14 +1,14 @@
 package com.laatencionalpresente.www.laatencionalpresente.Activitys;
 
-/**
- *Esta clase es el Activity Drawer, sera nuestra clase principal, aqui se veran todos los cursos.
+/*
+ * Esta clase es el Activity Drawer, sera nuestra clase principal, aqui se veran todos los cursos.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,11 +16,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.laatencionalpresente.www.laatencionalpresente.R;
 
+import static com.laatencionalpresente.www.laatencionalpresente.Utils.Datos.estaLogado;
+
 public class ActivityPrincipal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    
+    Menu nav_Menu;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,29 @@ public class ActivityPrincipal extends AppCompatActivity
         
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        
+        nav_Menu = navigationView.getMenu();
+        
+        
+        //ocultarNavs();
+        
+    }
+    
+    private void ocultarNavs(){
+        //esto comprueba si hay usuario logado. y oculta las opciones pertinentes.
+    
+        nav_Menu.findItem(R.id.nav_login).setVisible(true);
+        nav_Menu.findItem(R.id.nav_area_cliente).setVisible(true);
+        nav_Menu.findItem(R.id.nav_perfil).setVisible(true);
+        
+        if(estaLogado){
+            nav_Menu.findItem(R.id.nav_login).setVisible(false);
+        }else {
+            nav_Menu.findItem(R.id.nav_area_cliente).setVisible(false);
+            nav_Menu.findItem(R.id.nav_perfil).setVisible(false);
+        
+           
+        }
     }
     
     @Override
@@ -73,7 +101,9 @@ public class ActivityPrincipal extends AppCompatActivity
         int id = item.getItemId();
         
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.idiomaEsp) {
+            return true;
+        } else if (id == R.id.idiomaIng) {
             return true;
         }
         
@@ -85,23 +115,32 @@ public class ActivityPrincipal extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Intent i = null;
         
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_area_cliente) {
+    
+             i =new Intent(ActivityPrincipal.this,ActivityAreaPersonal.class);
+           
+        } else if (id == R.id.nav_perfil) {
+    
+            i =new Intent(ActivityPrincipal.this,ActivityAreaPersonal.class);
             
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_login) {
+    
+            i =new Intent(ActivityPrincipal.this,ActivityAreaPersonal.class);
             
-        } else if (id == R.id.nav_manage) {
-            
-        } else if (id == R.id.nav_share) {
-            
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_contacto) {
+    
+            i =new Intent(ActivityPrincipal.this,ActivityAreaPersonal.class);
             
         }
+    
+        startActivity(i);
         
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+        
+        
         return true;
     }
 }

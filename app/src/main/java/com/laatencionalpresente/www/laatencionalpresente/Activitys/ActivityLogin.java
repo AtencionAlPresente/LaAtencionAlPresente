@@ -1,6 +1,6 @@
 package com.laatencionalpresente.www.laatencionalpresente.Activitys;
 
-/**
+/*
  *Activity de acceso del usuario
  */
 
