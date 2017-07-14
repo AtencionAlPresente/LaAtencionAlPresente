@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -38,8 +37,8 @@ public class ActivityPrincipal extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i = new Intent(ActivityPrincipal.this, ActivityAreaPersonal.class);
+                startActivity(i);
             }
         });
         
@@ -59,20 +58,20 @@ public class ActivityPrincipal extends AppCompatActivity
         
     }
     
-    private void ocultarNavs(){
+    private void ocultarNavs() {
         //esto comprueba si hay usuario logado. y oculta las opciones pertinentes.
-    
+        
         nav_Menu.findItem(R.id.nav_login).setVisible(true);
         nav_Menu.findItem(R.id.nav_area_cliente).setVisible(true);
         nav_Menu.findItem(R.id.nav_perfil).setVisible(true);
         
-        if(estaLogado){
+        if (estaLogado) {
             nav_Menu.findItem(R.id.nav_login).setVisible(false);
-        }else {
+        } else {
             nav_Menu.findItem(R.id.nav_area_cliente).setVisible(false);
             nav_Menu.findItem(R.id.nav_perfil).setVisible(false);
-        
-           
+            
+            
         }
     }
     
@@ -118,23 +117,23 @@ public class ActivityPrincipal extends AppCompatActivity
         Intent i = null;
         
         if (id == R.id.nav_area_cliente) {
-    
-             i =new Intent(ActivityPrincipal.this,ActivityAreaPersonal.class);
-           
+            
+            i = new Intent(ActivityPrincipal.this, ActivityAreaPersonal.class);
+            
         } else if (id == R.id.nav_perfil) {
-    
-            i =new Intent(ActivityPrincipal.this,ActivityAreaPersonal.class);
+            
+            i = new Intent(ActivityPrincipal.this, ActivityAreaPersonal.class);
             
         } else if (id == R.id.nav_login) {
-    
-            i =new Intent(ActivityPrincipal.this,ActivityAreaPersonal.class);
+            
+            i = new Intent(ActivityPrincipal.this, ActivityAreaPersonal.class);
             
         } else if (id == R.id.nav_contacto) {
-    
-            i =new Intent(ActivityPrincipal.this,ActivityAreaPersonal.class);
+            
+            i = new Intent(ActivityPrincipal.this, ActivityAreaPersonal.class);
             
         }
-    
+        
         startActivity(i);
         
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
