@@ -5,8 +5,8 @@ package com.laatencionalpresente.www.laatencionalpresente;
  */
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.laatencionalpresente.www.laatencionalpresente.Activitys.ActivityPrincipal;
 
@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
         
         finish();//ant
-        
-     
+    
+        //esteve
         
     }
 }
