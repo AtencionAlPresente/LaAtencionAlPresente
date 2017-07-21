@@ -19,11 +19,8 @@ public class MainActivity extends AppCompatActivity {
     
         Intent i = new Intent(this,ActivityPrincipal.class);
         startActivity(i);
-        
-        finish();//ant
     
-    
-        //esteve
+        finish();
         
     }
 }
