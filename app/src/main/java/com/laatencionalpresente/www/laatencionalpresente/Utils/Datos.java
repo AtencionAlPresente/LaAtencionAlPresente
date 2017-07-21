@@ -6,6 +6,6 @@ package com.laatencionalpresente.www.laatencionalpresente.Utils;
  */
 
 public class Datos {
-    //1
+//3
     public static boolean estaLogado=false;
 }
