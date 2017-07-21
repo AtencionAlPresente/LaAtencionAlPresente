@@ -6,6 +6,6 @@ package com.laatencionalpresente.www.laatencionalpresente.Utils;
  */
 
 public class Datos {
-//1
+//Android
     public static boolean estaLogado=false;
 }
